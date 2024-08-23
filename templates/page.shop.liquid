@@ -1,0 +1,104 @@
+{% comment %} <section class="sec8 innersec" style="margin-top: 20px;">
+  <div class="container">
+    <div class="title">merican light beer</div>
+    <div class="subtitle">Merican is not just a light lager beer. It’s a beer that enhances the moment you’re in.</div>
+    <div class="buttons">
+      <a class="button">
+        <span>Explore</span>
+        <svg
+          width="11"
+          height="10"
+          viewBox="0 0 11 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z" fill="#FFF9EA" />
+        </svg>
+      </a>
+      <a class="button">
+        <span>Add to cart</span>
+        <svg
+          width="11"
+          height="10"
+          viewBox="0 0 11 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z" fill="#FFF9EA" />
+        </svg>
+      </a>
+    </div>
+    <img src="{{ 'bottle_of_beer.png' |  asset_url }}" alt="">
+  </div>
+</section>
+<section class="sec9">
+  <div class="container">
+    <div class="title">MERCH</div>
+    <div class="content">
+      <div class="left">
+        <style>
+          .content .left {
+            background-image: url('{{ 'i8.jpg' | asset_url }}');
+          }
+        </style>
+        <div class="product">
+          <img src="{{ 't.png' |  asset_url }}" alt="">
+          <a href="" class="link">
+            <svg
+              width="11"
+              height="10"
+              viewBox="0 0 11 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_58_1248)">
+                <path d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z" fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_58_1248">
+                  <rect
+                    width="11"
+                    height="10"
+                    fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="{{ 'i9.jpg' |  asset_url }}" alt="">
+        <img src="{{ 'i10.jpg' |  asset_url }}" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+{% endcomment %}
+<script>
+  const links = document.querySelectorAll('.mob_menu .links .link');
+  const ind = 2;
+  links[ind].style.opacity = '1'
+</script> 
+
+
+<div class="title">MERCH</div>
+{% render 'product-grid', col: 'main-product' %}
+{% render 'product-grid', col: 'merch' %}
+
+<section class="sec13">
+  <div class="container">
+    {% comment %} <h1>coming soon!</h1> {% endcomment %}
+    <p>Crisp beer coming soon!</p>
+    <img src="{{ 'pack.png' |  asset_url }}" alt="">
+  </div>
+</section>
+<style>
+  .title{
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 42px;
+  }
+</style>

@@ -1,0 +1,22 @@
+<div class="title">{{ collection.handle }}</div>
+{% render 'product-grid', col: 'merch' %}
+<section class="sec13">
+  <div class="container">
+    {% comment %} <h1>coming soon!</h1>
+    <p>We are currently working on something awesome. Stay tuned!</p> {% endcomment %}
+    <img src="{{ 'pack.png' |  asset_url }}" alt="">
+  </div>
+</section>
+<style>
+  .title{
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 42px;
+  }
+</style>

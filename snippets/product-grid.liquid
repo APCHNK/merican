@@ -1,0 +1,8 @@
+{% assign collection_name = col %}
+<section class="sec19">
+    <div class="container">
+        {% for product in collections[collection_name].products %}
+            {% render 'product', product: product %}
+        {% endfor %}
+    </div>
+</section>

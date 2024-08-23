@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Social Links",
+    "settings": [
+      {
+        "type": "url",
+        "label": "Instagram",
+        "id": "instagram"
+      },
+      {
+        "type": "url",
+        "label": "Faceboook",
+        "id": "facebook"
+      },
+      {
+        "type": "url",
+        "label": "LinkedIn",
+        "id": "linkedin"
+      }
+    ]
+  }
+]

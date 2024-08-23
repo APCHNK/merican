@@ -1,0 +1,50 @@
+
+
+<div class="productt">
+    <div class="image" style="background-color: 
+        {% if product.metafields.custom.background_color %}
+            var(--red)
+        {%  else %} 
+            #231f20
+        {% endif %}
+        ;">
+        <img class="main-image" src="{{ product.featured_image |  image_url}}" alt="">
+
+        {% if product.metafields.custom.hover_image %}
+            <img class="hover-image" src="{{ product.metafields.custom.hover_image | image_url }}" alt="">
+        {% else %}
+            <img class="inner-hover-image" src="{{ product.featured_image |  image_url}}" alt="">
+        {% endif %}
+
+    </div>
+    <div class="info">
+        <div class="top">
+            <div class="name">{{ product.title }}  ({% if product.price_varies %} {{ product.price_min |  money_without_trailing_zeros}} - {{ product.price_max |  money_without_trailing_zeros}} {% else %}
+                {{ product.price_min |  money_without_trailing_zeros}}
+                 {% endif %})
+            
+            </div>
+            <form  method="post" enctype="multipart/form-data" class="product-form">
+                <input type="hidden" class="tocart" name="id" value="" />
+                <input type="hidden" name="quantity" value="1" />
+                <button type="submit" class="btn but addtocart">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.62669 6.38004H13.44V8.19337H7.62669V14.0334H5.81336V8.19337H2.67029e-05V6.38004H5.81336V0.540039H7.62669V6.38004Z" fill="black"></path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="description">
+            <span class="descc">{{ product.metafields.custom.description }}</span>
+            <div class="sizes">
+                {% for size in product.variants %}
+                    <div class="size" data-sizevariant={{size.id}}>{{size.title}}
+                        {% comment %} <div class="price">{{size.price |  money}}</div> {% endcomment %}
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="message"></div>
+    </div>
+</div>
+
